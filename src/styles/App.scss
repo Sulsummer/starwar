@@ -40,12 +40,13 @@ nav {
       height: 100%;
       display: inline-block;
       box-sizing: border-box;
+      position: relative;
+      z-index: 1;
       .intro-card {
         width: 100%;
         margin-bottom: 15px;
         box-sizing: border-box;
         background: #fff;
-        opacity: 0.9;
         color: rgb(80, 80, 80);
         .intro-avatar {
           width: 100%;
@@ -66,6 +67,33 @@ nav {
               font-size: 200%;
               line-height: 200%;
               color: #575ca9;
+            }
+          }
+          .switch-name-panel {
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            .switch-name-list {
+              display: none;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 90%;
+              height: 200px;
+              overflow: scroll;
+              background: #eee;
+              border-radius: 0;
+              li {
+                height: 40px;
+                line-height: 40px;
+                padding: 0 5px;
+                cursor: pointer;
+                transition: all 0.2s;
+                color: #79bd9a;
+                &:hover {
+                  background: #ccc;
+                }
+              }
             }
           }
         }
